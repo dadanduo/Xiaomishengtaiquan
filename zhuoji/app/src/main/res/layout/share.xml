@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <com.amap.api.maps.MapView
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </com.amap.api.maps.MapView>
+
+
+        <RelativeLayout
+            android:id="@+id/btn_go_s_h"
+            android:layout_width="match_parent"
+            android:background="@color/colorwhite"
+            android:alpha="0.9"
+            android:layout_marginTop="48dp"
+            android:layout_height="48dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerInParent="true"
+                android:alpha="0.9"
+                >
+                <LinearLayout
+                    android:id="@+id/goon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:orientation="vertical"
+                    android:background="@color/colorwhite">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18dp"
+                        android:text="出行"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="8dp"/>
+                    <View
+                        android:id="@+id/goonview"
+                        android:layout_width="55dp"
+                        android:background="@color/colorAccent"
+                        android:layout_marginTop="8dp"
+                        android:layout_height="2dp"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/service"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/colorwhite">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18dp"
+                        android:text="服务"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="8dp"/>
+                    <View
+                        android:id="@+id/serviceview"
+                        android:layout_width="55dp"
+                        android:background="@color/colortransparent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="8dp"
+                        ></View>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/residence"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/colorwhite">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_gravity="center"
+                        android:text="居所"/>
+                    <View
+                        android:id="@+id/residenceview"
+                        android:layout_width="55dp"
+                        android:background="@color/colortransparent"
+                        android:layout_marginTop="8dp"
+                        android:layout_height="2dp"
+                       />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <include layout="@layout/station_address"></include>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="30dp"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerInParent="true"
+                >
+                <ImageView
+                    android:id="@+id/Resetleft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/nav_orientation"
+                    android:layout_gravity="center_vertical"
+                    />
+                <Button
+                    android:id="@+id/useBike"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/use_shape"
+                    android:text="我要用车"
+                    android:layout_marginLeft="30dp"
+                    android:textColor="@color/colorwhite"
+                    android:textSize="23dp"/>
+
+                <ImageView
+                    android:id="@+id/ResetRight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:background="@mipmap/nav_orientation"
+                    android:layout_gravity="center_vertical"
+                    />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </FrameLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/colorPrimaryDark">
+        <ImageView
+            android:id="@+id/message"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:background="@mipmap/home_message_icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:layout_centerInParent="true"
+            android:textColor="@color/colorwhite"
+            android:textSize="20dp"/>
+        <LinearLayout
+            android:id="@+id/citychoose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"
+            >
+            <TextView
+                android:id="@+id/cityname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/colorwhite"
+                android:textSize="18dp"/>
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="@mipmap/cityimg"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="12dp"
+                />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+
+</FrameLayout>
