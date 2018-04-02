@@ -21,7 +21,7 @@ import com.xiaomishengtaiquan.interfaceCallback.OnLocationGetCityListener;
 /**
  * ClassName:LocationTask <br/>
  * Function: 简单封装了定位请求，可以进行单次定位和多次定位，注意的是在app结束或定位结束时注意销毁定位 <br/>
- * Date: 2015年4月3日 上午9:27:45 <br/>
+ * Date: 2018年4月2日 上午9:27:45 <br/>
  *
  * @author dada.chen
  * @version

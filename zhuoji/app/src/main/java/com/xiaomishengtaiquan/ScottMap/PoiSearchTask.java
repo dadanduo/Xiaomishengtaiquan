@@ -24,7 +24,7 @@ import java.util.List;
 /**
  * ClassName:PoiSearchTask <br/>
  * Function: 简单封装了poi搜索的功能，搜索结果配合RecommendAdapter进行使用显示 <br/>
- * Date: 2015年4月7日 上午11:25:07 <br/>
+ * Date: 2018年4月2日 上午11:25:07 <br/>
  * 
  * @author dada.chen
  * @version

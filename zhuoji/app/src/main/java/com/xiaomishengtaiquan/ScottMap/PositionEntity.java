@@ -11,7 +11,7 @@ package com.xiaomishengtaiquan.ScottMap;
 /**
  * ClassName:PositionEntity <br/>
  * Function: 封装的关于位置的实体 <br/>
- * Date: 2015年4月3日 上午9:50:28 <br/>
+ * Date: 2018年4月2日 上午9:50:28 <br/>
  * 
  * @author dada.chen
  * @version

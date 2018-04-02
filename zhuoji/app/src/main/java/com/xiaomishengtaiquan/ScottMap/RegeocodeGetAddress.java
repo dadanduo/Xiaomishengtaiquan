@@ -24,7 +24,7 @@ import com.xiaomishengtaiquan.interfaceCallback.OnLocationGetAddressGetListener;
 /**
  * ClassName:RegeocodeTask <br/>
  * Function: 简单的封装的逆地理编码功能 <br/>
- * Date: 2015年4月2日 下午6:24:53 <br/>
+ * Date: 2018年4月2日 下午6:24:53 <br/>
  *
  * @author dada.chenda
  * @version
