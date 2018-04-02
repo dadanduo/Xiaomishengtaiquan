@@ -103,15 +103,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
         //第一种方式（add），初始化fragment并添加到事务中，如果为null就new一个
-        if(sharedFragment == null){
-            sharedFragment = new SharedFragment();
-            transaction.add(R.id.main_frame_layout, sharedFragment);
+        if( foundFragment == null){
+            foundFragment = new FoundFragment();
+            transaction.add(R.id.main_frame_layout, foundFragment);
 
         }
         //隐藏所有fragment
         hideFragment(transaction);
         //显示需要显示的fragment
-        transaction.show(sharedFragment);
+        transaction.show(foundFragment);
         //提交事务
         transaction.commit();
 
@@ -133,15 +133,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
         //第一种方式（add），初始化fragment并添加到事务中，如果为null就new一个
-        if(foundFragment == null){
-            foundFragment = new FoundFragment();
-            transaction.add(R.id.main_frame_layout, foundFragment);
+        if(recomMendedFragment == null){
+            recomMendedFragment = new RecomMendedFragment();
+            transaction.add(R.id.main_frame_layout,recomMendedFragment );
 
         }
         //隐藏所有fragment
         hideFragment(transaction);
         //显示需要显示的fragment
-        transaction.show(foundFragment);
+        transaction.show(recomMendedFragment);
         //提交事务
         transaction.commit();
 
@@ -162,15 +162,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
         //第一种方式（add），初始化fragment并添加到事务中，如果为null就new一个
-        if(recomMendedFragment == null){
-            recomMendedFragment = new RecomMendedFragment();
-            transaction.add(R.id.main_frame_layout, recomMendedFragment);
+        if(sharedFragment== null){
+           sharedFragment = new SharedFragment();
+            transaction.add(R.id.main_frame_layout, sharedFragment);
 
         }
         //隐藏所有fragment
         hideFragment(transaction);
         //显示需要显示的fragment
-        transaction.show(recomMendedFragment);
+        transaction.show(sharedFragment);
         //提交事务
         transaction.commit();
 

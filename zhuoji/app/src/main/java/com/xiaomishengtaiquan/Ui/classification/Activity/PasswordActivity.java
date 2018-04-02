@@ -27,7 +27,6 @@ import org.xutils.x;
  * Created by chenda on 2018/3/28.
  */
 
-//密码设置页面
 @ContentView(R.layout.password_set)
 public class PasswordActivity extends Activity {
 
