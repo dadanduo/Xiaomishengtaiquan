@@ -49,6 +49,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.regex.Pattern;
 
+//城市选择页面
 public class CityActivity extends Activity implements OnScrollListener,AMapLocationListener,
         OnLocationGetCityListener {
     private BaseAdapter adapter;

@@ -17,6 +17,7 @@ import com.xiaomishengtaiquan.Utils.LogAll;
 
 /**
  * Created by chenda on 2018/3/21.
+ * 二维码扫描页面
  */
 
 public class ZxingSweepActivity extends Activity implements DecoratedBarcodeView.TorchListener{

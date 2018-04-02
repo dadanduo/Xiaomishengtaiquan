@@ -23,6 +23,7 @@ import com.xiaomishengtaiquan.R;
 import com.xiaomishengtaiquan.Utils.PrefManager;
 import com.xiaomishengtaiquan.Utils.UtilsAll;
 
+//欢迎页面
 public class WelcomeActivity extends AppCompatActivity {
 
     private ViewPager viewPager;

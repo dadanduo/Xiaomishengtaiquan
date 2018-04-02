@@ -32,6 +32,7 @@ import org.xutils.x;
 
 /**
  * Created by chenda on 2018/3/26.
+ * 注册页面
  */
 
 @ContentView(R.layout.signup)

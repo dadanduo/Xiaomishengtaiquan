@@ -11,6 +11,7 @@ import com.xiaomishengtaiquan.R;
  * Created by chenda on 2018/3/22.
  */
 
+//消息页面
 public class MessageActivity extends Activity {
 
     @Override

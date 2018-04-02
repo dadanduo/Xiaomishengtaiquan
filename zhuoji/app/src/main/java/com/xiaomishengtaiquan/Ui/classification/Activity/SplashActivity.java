@@ -1,6 +1,5 @@
 package com.xiaomishengtaiquan.Ui.classification.Activity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
@@ -12,6 +11,7 @@ import com.xiaomishengtaiquan.MainActivity;
 import com.xiaomishengtaiquan.R;
 import com.xiaomishengtaiquan.Utils.UtilsAll;
 
+//闪屏页
 public class SplashActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
