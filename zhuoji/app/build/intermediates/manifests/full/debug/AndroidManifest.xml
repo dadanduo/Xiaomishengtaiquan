@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.xiaomishengtaiquan"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="26" />
+    //地图SDK（包含其搜索功能）需要的基础权限
+    <!-- 允许程序打开网络套接字 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 允许程序设置内置sd卡的写权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 允许程序获取网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 允许程序访问WiFi网络信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 允许程序读写手机状态和身份 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 允许程序访问CellID或WiFi热点来获取粗略的位置 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!-- 用于申请获取蓝牙信息进行室内定位 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!-- 定位权限 -->
+    <uses-permission android:name="android.permission.INVALID_USER_KEY" />
+    <!-- 扫描需要的权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <!-- Don't require camera, as this requires a rear camera. This allows it to work on the Nexus 7 -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" /> <!-- TODO replace above two with next line after Android 4.2 -->
+    <!-- <uses-feature android:name="android.hardware.camera.any"/> -->
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.screen.landscape"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="false" />
+
+    <application
+        android:name="com.xiaomishengtaiquan.Application.ZApplication"
+        android:allowBackup="true"
+        android:debuggable="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity android:name="com.xiaomishengtaiquan.Ui.classification.Activity.WelcomeActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="bfcc5ada51c0b71957d03219e2c22e2e" >
+            //开发者申请的key
+        </meta-data>
+
+        <service android:name="com.amap.api.location.APSService" />
+
+        <activity android:name="com.xiaomishengtaiquan.Ui.classification.Activity.SplashActivity" />
+        <activity android:name="com.xiaomishengtaiquan.Ui.classification.Activity.CityActivity" />
+        <activity android:name="com.xiaomishengtaiquan.Ui.classification.Activity.ZxingSweepActivity" />
+        <activity android:name="com.xiaomishengtaiquan.Ui.classification.Activity.LoginActivity" />
+        <activity android:name="com.xiaomishengtaiquan.Ui.classification.Activity.SingupActivity" />
+        <activity android:name="com.xiaomishengtaiquan.Ui.classification.Activity.PasswordActivity" />
+        <activity android:name="com.xiaomishengtaiquan.MainActivity" />
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:clearTaskOnLaunch="true"
+            android:screenOrientation="sensorLandscape"
+            android:stateNotNeeded="true"
+            android:theme="@style/zxing_CaptureTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <meta-data
+            android:name="android.support.VERSION"
+            android:value="26.1.0" />
+        <meta-data
+            android:name="android.arch.lifecycle.VERSION"
+            android:value="27.0.0-SNAPSHOT" />
+    </application>
+
+</manifest>
